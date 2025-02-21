@@ -9,7 +9,7 @@ function NewsItems({ category, setCategory, country, isLoggedIn, setIsLoggedIn }
 
     const resultNews = async () => {
         // Hardcoded URL for testing
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=a63ab02946b640f1a45559f967c8e017&page=${pageNumber}`;
+        const url = `https://news-aggregator-dusky.vercel.app/country/&category=business&apiKey=a63ab02946b640f1a45559f967c8e0177&page=${pageNumber}`;
         console.log("Fetching URL:", url); // Debug the URL
 
         try {
@@ -54,7 +54,7 @@ function NewsItems({ category, setCategory, country, isLoggedIn, setIsLoggedIn }
 
     const pageNextHandler = async () => {
         const nextPageNumber = pageNumber + 1;
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a63ab02946b640f1a45559f967c8e017&page=${nextPageNumber}`;
+        const url = `https://news-aggregator-dusky.vercel.app/country/&category=business&apiKey=a63ab02946b640f1a45559f967c8e017&page=${nextPageNumber}`;
         console.log("Fetching Next Page URL:", url);
 
         try {
