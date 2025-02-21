@@ -9,7 +9,7 @@ function NewsItems({ category, setCategory, country, isLoggedIn, setIsLoggedIn }
 
     const resultNews = async () => {
         // Hardcoded URL for testing
-        const url = `https://news-aggregator-dusky.vercel.app/country/&category=business&apiKey=a63ab02946b640f1a45559f967c8e0177&page=${pageNumber}`;
+       fetch(`https://news-aggregator-dusky.vercel.app/all-news?page=${page}&pageSize=${pageSize}`)
         console.log("Fetching URL:", url); // Debug the URL
 
         try {
